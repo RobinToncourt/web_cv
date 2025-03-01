@@ -1,4 +1,3 @@
-use crate::Cv;
 use crate::content::menu::Menu;
 
 pub struct TemplateApp {
@@ -16,6 +15,7 @@ impl Default for TemplateApp {
 impl TemplateApp {
     /// Called once before the first frame.
     pub fn new(cc: &eframe::CreationContext<'_>) -> Self {
+        egui_extras::install_image_loaders(&cc.egui_ctx);
         // This is also where you can customize the look and feel of egui using
         // `cc.egui_ctx.set_visuals` and `cc.egui_ctx.set_fonts`.
 
@@ -31,7 +31,7 @@ impl TemplateApp {
 
 impl eframe::App for TemplateApp {
     /// Called by the frame work to save state before shutdown.
-    fn save(&mut self, storage: &mut dyn eframe::Storage) {
+    fn save(&mut self, _storage: &mut dyn eframe::Storage) {
         // eframe::set_value(storage, eframe::APP_KEY, self);
     }
 
