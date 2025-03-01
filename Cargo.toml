@@ -1,5 +1,5 @@
 [package]
-name = "playground"
+name = "web_cv"
 version = "0.1.0"
 authors = ["Robin Toncourt <robin.toncourt@laposte.net>"]
 edition = "2021"
