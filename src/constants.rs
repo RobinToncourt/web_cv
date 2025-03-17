@@ -1,3 +1,6 @@
+// TODO
+// -Rajouter context.
+// -Traduire.
 pub static JSON: &str = r#"{
     "fr": {
         "exp":
@@ -8,7 +11,11 @@ pub static JSON: &str = r#"{
             "KNDS_BOURGES_TITLE": "Client : KNDS (ex-Nexter) à Bourges",
             "KNDS_BOURGES_DATES": "Janvier 2025 à ce jour",
             "KNDS_BOURGES_MISSION": "Projet Top&Ready
-L'objectif de cette mission est de factoriser et transformer en service le logiciel historique embarqué sur les CAESAR.",
+KNDS demande à ce que le logiciel historique TOP&READY, deux logiciels installé sur le CAESAR, soientt modernisés.
+Pour ce faire les différentes fonctionnalitées sur transformé en services et .
+Cela permettra de faire plus facilement évoluer les logiciels ainsi qu'une meilleur maintenabilité.
+Il est aussi envisagé de se séparer de Microsoft MFC pour permettre une migration vers linux.
+J'ai du implémenter un service de communication entre le logiciel principal et la central inertielle.",
             "KNDS_BOURGES_TECHNOS": "Technos: C++, Git, Jenkins",
 
             "THALES_ORLEANS_ID": "thales_orleans_trusttool",
