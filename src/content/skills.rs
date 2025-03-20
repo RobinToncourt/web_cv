@@ -38,7 +38,7 @@ impl crate::View for Skills {
     }
 }
 
-use json::Value;
+use crate::json::Value;
 
 fn show_array_cell_by_line(value: &Value, ui: &mut egui::Ui) {
     match value {

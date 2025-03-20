@@ -11,7 +11,7 @@ pub static JSON: &str = r#"{
             "KNDS_BOURGES_TITLE": "Client : KNDS (ex-Nexter) à Bourges",
             "KNDS_BOURGES_DATES": "Janvier 2025 à ce jour",
             "KNDS_BOURGES_MISSION": "Projet Top&Ready
-KNDS demande à ce que le logiciel historique TOP&READY, deux logiciels installé sur le CAESAR, soientt modernisés.
+KNDS demande à ce que le logiciel historique Top&Ready, deux logiciels installé sur le CAESAR, soientt modernisés.
 Pour ce faire les différentes fonctionnalitées sur transformé en services et .
 Cela permettra de faire plus facilement évoluer les logiciels ainsi qu'une meilleur maintenabilité.
 Il est aussi envisagé de se séparer de Microsoft MFC pour permettre une migration vers linux.

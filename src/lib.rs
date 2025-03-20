@@ -6,6 +6,8 @@ pub use app::TemplateApp;
 pub mod content;
 mod constants;
 
+mod json;
+
 use std::sync::Mutex;
 
 use lazy_static::lazy_static;
