@@ -29,9 +29,7 @@ log = "0.4"
 lazy_static = "1.5.0"
 # You only need serde if you want app persistence:
 serde = { version = "1", features = ["derive"] }
-
-[dependencies.json]
-path = "../json"
+anyhow = "1.0.96"
 
 # native:
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
