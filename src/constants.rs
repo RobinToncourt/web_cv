@@ -3,6 +3,9 @@
 // -Traduire.
 pub static JSON: &str = r#"{
     "fr": {
+        "about": "Déterminé, sérieux, autonome et conscient du
+travail qui m'attend, je suis persuadé que je serais
+un élément moteur au sein de votre structure !",
         "exp":
         {
             "AKKODIS": "De février 2023 à ce jour : Akkodis",

@@ -20,15 +20,13 @@ impl crate::Page for About {
     }
 }
 
+use crate::TEXT;
+
 impl crate::View for About {
     fn ui(&mut self, ui: &mut egui::Ui) {
         ui.heading("Robin Toncourt");
         ui.image(egui::include_image!("../../assets/Photo.jpeg"));
-        ui.label(format!(
-            "Déterminé, sérieux, autonome et conscient du
-            travail qui m'attend, je suis persuadé que je serais
-            un élément moteur au sein de votre structure !"
-        ));
+        ui.label(TEXT["fr"]["about"].to_string());
 
         ui.add_space(12.0);
 
