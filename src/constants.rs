@@ -78,7 +78,7 @@ Menace est une application de référencement des objets détectés. Mon implica
 
             "THALES_BREST_SAMDIS_ID": "thales_brest_samdis",
             "THALES_BREST_SAMDIS_TITLE": "Client : Thales à Brest",
-            "THALES_BREST_SAMDIS_DATES": "",
+            "THALES_BREST_SAMDIS_DATES": "24/09/2019 au 23/09/2021",
             "THALES_BREST_SAMDIS_MISSION": "Projet : SAMDIS data analysis
 Développeur Logiciel
 L’objectif de ce projet est de fournir une aide à l’analyse et au traitement de fichiers, documents, bases de données pour le développement du produit SAMDIS, développé dans le service Guerre Des Mines d’UWS.
@@ -90,7 +90,7 @@ Lors de ce projet j’ai beaucoup monté en compétence sur JavaFX et sur la con
 
             "THALES_BREST_CPP_TO_JAVA_ID": "thales_brest_cpp_to_java",
             "THALES_BREST_CPP_TO_JAVA_TITLE": "Client : Thales à Brest",
-            "THALES_BREST_CPP_TO_JAVA_DATES": "",
+            "THALES_BREST_CPP_TO_JAVA_DATES": "01/10/2018 aux 24/09/2019",
             "THALES_BREST_CPP_TO_JAVA_MISSION": "Projet : Étude des performances de Java
 Développeur Logiciel
 Le but de ce projet était de tester les performances de Java, dans un premier temps, puis de les comparer avec le C++. On m’a donc demandé de traduire, du C++ vers le Java, un programme pour ensuite faire différents tests de charge sur les deux versions et de les comparer. Les comparaisons ont été faites sur le temps d’exécution des méthodes importantes ainsi que sur la mémoire utilisée par la JVM. J’ai aussi comparé les différents ramasse miettes, leurs efficacités et leurs vitesses d’exécutions.",
