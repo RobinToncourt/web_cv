@@ -100,7 +100,7 @@ Le but de ce projet était de tester les performances de Java, dans un premier t
 
             "KERPAPE_LORIENT_I2_ID": "kerpape_lorient_i2",
             "KERPAPE_LORIENT_I2_TITLE": "Client : Kerpape à Lorient",
-            "KERPAPE_LORIENT_I2_DATES": "",
+            "KERPAPE_LORIENT_I2_DATES": "08/01/2018 au 23/02/2018",
             "KERPAPE_LORIENT_I2_MISSION": "Projet : Amélioration et évolution de l’intranet de l’hôpital.
 Développeur Logiciel
 Lors de mes stages de BTS dans le service informatique, j’ai dû créer une interface WEB, HTML, CSS, JavaScript, pour faciliter et assister les collaborateurs dans leurs tâches.",
@@ -108,13 +108,13 @@ Lors de mes stages de BTS dans le service informatique, j’ai dû créer une in
 
             "KERPAPE_LORIENT_SUMMER_ID": "kerpape_lorient_summer",
             "KERPAPE_LORIENT_SUMMER_TITLE": "Client : Kerpape à Lorient",
-            "KERPAPE_LORIENT_SUMMER_DATES": "",
+            "KERPAPE_LORIENT_SUMMER_DATES": "28/06/2017 au 26/07/2017",
             "KERPAPE_LORIENT_SUMMER_MISSION": "",
             "KERPAPE_LORIENT_SUMMER_TECHNOS": "Technos : PHP, JavaScript, Oracle DB, MySql",
 
             "KERPAPE_LORIENT_I1_ID": "kerpape_lorient_i1",
             "KERPAPE_LORIENT_I1_TITLE": "Client : Kerpape à Lorient",
-            "KERPAPE_LORIENT_I1_DATES": "",
+            "KERPAPE_LORIENT_I1_DATES": "15/05/2017 au 23/06/2017",
             "KERPAPE_LORIENT_I1_MISSION": "",
             "KERPAPE_LORIENT_I1_TECHNOS": "Technos : PHP, JavaScript, Oracle DB, MySql"
         },
@@ -122,21 +122,28 @@ Lors de mes stages de BTS dans le service informatique, j’ai dû créer une in
             "PROG_LANG": [
                 "🡢Rust ★★★★★
 Rust est mon langage de programmation préféré.",
-                "🡢C/C++ ★★★★☆",
-                "🡢Java ★★★☆☆
+                "🡢C/C++ ★★★★★",
+                "🡢Java ★★★★☆
 Le langage avec lequel j'ai vraiment commencé la programmation au lycée.",
                 "🡢Python ★★★☆☆",
-                "🡢Ada ★★☆☆☆"
+                "🡢Ada ★★☆☆☆",
+                "🡢Sql★★★☆☆",
+                "|🡢SqLite",
+                "|🡢Oracle",
+                "|🡢MySql"
             ],
             "TOOLS": [
-                "✎SqLite",
-                "✎Oracle",
-                "✎MySql"
+                "✎Git",
+                "✎Agile"
             ],
             "ENV": [
                 "∞Eclipse",
                 "∞QtCreator",
-                "∞Visual Studio 2017"
+                "∞Visual Studio 2017",
+                "LabWindows/CVI",
+                "TestStand",
+                "Windows",
+                "Linux"
             ],
             "LANG": [
                 "✓Français, natif",
@@ -144,9 +151,13 @@ Le langage avec lequel j'ai vraiment commencé la programmation au lycée.",
             ]
         },
         "edu": {
-            "ADA": " • 2025 : Formation Ada par Robert Cholay",
-            "EPSI": " • 2018-2021 : Master expert en informatique et systèmes d'informations - EPSI - Brest",
-            "BTS": " • 2016-2018 : BTS Service Informatique aux Organisation option Solutions Logicielles et applications métiers"
+            "ADA": " • 2025 : Formation Ada par Robert Cholay
+Des bases du langage jusqu'aux concepts plus haut niveau (OOP, pointeurs, génériques, ...).",
+            "EPSI": " • 2018-2021 : Master expert en informatique et systèmes d'informations - EPSI - Brest
+License d'un an en alternance suivi de deux ans de master en alterance.",
+            "BTS": " • 2016-2018 : BTS Service Informatique aux Organisation option Solutions Logicielles et applications métiers
+BTS, avec stage de 1 mois
+Option SLAM (Solution Logiciel et Application Métier)"
         }
     }
 }
