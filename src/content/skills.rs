@@ -8,15 +8,15 @@ impl crate::Page for Skills {
 
     fn show(&mut self, ctx: &egui::Context, open: &mut bool) {
         egui::Window::new(self.name())
-        .default_width(320.0)
-        .default_height(480.0)
-        .open(open)
-        .resizable([false, false])
-        .scroll(false)
-        .show(ctx, |ui| {
-            use crate::View as _;
-            self.ui(ui);
-        });
+            .default_width(320.0)
+            .default_height(480.0)
+            .open(open)
+            .resizable([false, false])
+            .scroll(false)
+            .show(ctx, |ui| {
+                use crate::View as _;
+                self.ui(ui);
+            });
     }
 }
 
@@ -46,7 +46,7 @@ fn show_array_cell_by_line(value: &Value, ui: &mut egui::Ui) {
             for e in array {
                 ui.label(e.to_string());
             }
-        },
+        }
         _ => panic!("Not an array."),
     }
 }

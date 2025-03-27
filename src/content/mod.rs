@@ -1,10 +1,10 @@
 pub mod about;
-pub mod menu;
-pub mod experiences;
-pub mod education;
-pub mod skills;
-pub mod games;
-pub mod movies;
 pub mod books;
-pub mod sport;
+pub mod education;
+pub mod experiences;
+pub mod games;
+pub mod menu;
+pub mod movies;
 pub mod projects;
+pub mod skills;
+pub mod sport;

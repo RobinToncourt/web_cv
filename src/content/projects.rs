@@ -3,20 +3,20 @@ pub struct Projects {}
 
 impl crate::Page for Projects {
     fn name(&self) -> String {
-        "TODO: title".to_string()
+        "TODO: projects title".to_string()
     }
 
     fn show(&mut self, ctx: &egui::Context, open: &mut bool) {
         egui::Window::new(self.name())
-        .default_width(320.0)
-        .default_height(480.0)
-        .open(open)
-        .resizable([false, false])
-        .scroll(false)
-        .show(ctx, |ui| {
-            use crate::View as _;
-            self.ui(ui);
-        });
+            .default_width(320.0)
+            .default_height(480.0)
+            .open(open)
+            .resizable([false, false])
+            .scroll(false)
+            .show(ctx, |ui| {
+                use crate::View as _;
+                self.ui(ui);
+            });
     }
 }
 

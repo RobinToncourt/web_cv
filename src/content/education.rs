@@ -8,15 +8,15 @@ impl crate::Page for Education {
 
     fn show(&mut self, ctx: &egui::Context, open: &mut bool) {
         egui::Window::new(self.name())
-        .default_width(500.0)
-        .default_height(480.0)
-        .open(open)
-        .resizable([true, true])
-        .scroll(true)
-        .show(ctx, |ui| {
-            use crate::View as _;
-            self.ui(ui);
-        });
+            .default_width(500.0)
+            .default_height(480.0)
+            .open(open)
+            .resizable([true, true])
+            .scroll(true)
+            .show(ctx, |ui| {
+                use crate::View as _;
+                self.ui(ui);
+            });
     }
 }
 

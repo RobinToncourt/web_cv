@@ -1,8 +1,8 @@
 use std::collections::HashMap;
-use std::iter::Peekable;
-use std::str::Chars;
 use std::fmt;
+use std::iter::Peekable;
 use std::ops::Index;
+use std::str::Chars;
 
 use anyhow::anyhow;
 

@@ -24,7 +24,9 @@ impl crate::Page for About {
 
 impl crate::View for About {
     fn ui(&mut self, ui: &mut egui::Ui) {
-        ui.image(egui::include_image!("../../assets/Photo.jpeg"));
+        ui.image(egui::include_image!(
+            "../../assets/photo_side_cropped_reversed.jpg"
+        ));
         ui.label(TEXT["fr"]["about"]["CONTENT"].to_string());
 
         ui.add_space(12.0);
@@ -37,10 +39,10 @@ fn links(ui: &mut egui::Ui) {
     use egui::special_emojis::GITHUB;
     ui.hyperlink_to(
         format!("{GITHUB} github.com/RobinToncourt"),
-        "https://github.com/RobinToncourt"
+        "https://github.com/RobinToncourt",
     );
     ui.hyperlink_to(
         "linkedin.com/in/toncourt-robin/",
-        "https://www.linkedin.com/in/toncourt-robin/"
+        "https://www.linkedin.com/in/toncourt-robin/",
     );
 }

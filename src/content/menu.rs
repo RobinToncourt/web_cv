@@ -1,17 +1,10 @@
 use std::collections::BTreeSet;
 
-use crate::Page;
 use crate::content::{
-    about::About,
-    experiences::Experiences,
-    skills::Skills,
-    education::Education,
-    games::Games,
-    movies::Movies,
-    books::Books,
-    sport::Sport,
-    projects::Projects,
+    about::About, books::Books, education::Education, experiences::Experiences, games::Games,
+    movies::Movies, projects::Projects, skills::Skills, sport::Sport,
 };
+use crate::Page;
 
 pub struct Menu {
     open: BTreeSet<String>,
@@ -85,7 +78,6 @@ impl Menu {
         for page in &mut self.hobby_pages {
             show(ctx, &mut self.open, page);
         }
-
     }
 
     fn toggle_about(&mut self, ui: &mut egui::Ui) {
