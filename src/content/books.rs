@@ -2,8 +2,8 @@
 pub struct Books {}
 
 impl crate::Page for Books {
-    fn name(&self) -> &'static str {
-        "Les livres que j'ai lu"
+    fn name(&self) -> String {
+        "TODO: title".to_string()
     }
 
     fn show(&mut self, ctx: &egui::Context, open: &mut bool) {
@@ -22,28 +22,6 @@ impl crate::Page for Books {
 
 impl crate::View for Books {
     fn ui(&mut self, ui: &mut egui::Ui) {
-        ui.heading("Robin Toncourt");
-        ui.image(egui::include_image!("../../assets/Photo.jpeg"));
-        ui.label(format!(
-            "Déterminé, sérieux, autonome et conscient du
-            travail qui m'attend, je suis persuadé que je serais
-            un élément moteur au sein de votre structure !"
-        ));
-
-        ui.add_space(12.0);
-
-        links(ui);
+        ui.label("TODO: content");
     }
-}
-
-fn links(ui: &mut egui::Ui) {
-    use egui::special_emojis::GITHUB;
-    ui.hyperlink_to(
-        format!("{GITHUB} github.com/RobinToncourt"),
-            "https://github.com/RobinToncourt"
-    );
-    ui.hyperlink_to(
-        format!("linkedin.com/in/toncourt-robin/"),
-            "https://www.linkedin.com/in/toncourt-robin/"
-    );
 }

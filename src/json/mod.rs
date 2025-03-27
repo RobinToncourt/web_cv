@@ -24,19 +24,6 @@ pub enum Value {
     Number(f64),
 }
 
-impl Value {
-    pub fn get_type(&self) -> String {
-        match self {
-            Value::Object(_) => "Object",
-            Value::Array(_) => "Array",
-            Value::String(_) => "String",
-            Value::Bool(_) => "Bool",
-            Value::Null(_) => "Null",
-            Value::Number(_) => "Number",
-        }.to_string()
-    }
-}
-
 impl fmt::Display for Value {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
@@ -165,24 +152,21 @@ fn parse_string(chars: &mut Peekable<Chars>) -> anyhow::Result<String> {
     let mut last_char: Option<char> = None;
     let mut string_buffer = String::new();
 
-    while let Some(c) = chars.next() {
-        match c {
-            '"' => {
-                if let Some(lc) = last_char {
-                    if lc == '\\' {
-                        last_char = Some(c);
-                        string_buffer.push(c);
-                    } else {
-                        return Ok(string_buffer);
-                    }
+    for c in chars {
+        if c == '"' {
+            if let Some(lc) = last_char {
+                if lc == '\\' {
+                    last_char = Some(c);
+                    string_buffer.push(c);
                 } else {
                     return Ok(string_buffer);
                 }
+            } else {
+                return Ok(string_buffer);
             }
-            _ => {
-                last_char = Some(c);
-                string_buffer.push(c);
-            }
+        } else {
+            last_char = Some(c);
+            string_buffer.push(c);
         }
     }
 

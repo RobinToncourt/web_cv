@@ -1,9 +1,11 @@
 #[derive(Default)]
 pub struct About {}
 
+use crate::TEXT;
+
 impl crate::Page for About {
-    fn name(&self) -> &'static str {
-        "À propos de moi"
+    fn name(&self) -> String {
+        TEXT["fr"]["about"]["TITLE"].to_string()
     }
 
     fn show(&mut self, ctx: &egui::Context, open: &mut bool) {
@@ -20,13 +22,10 @@ impl crate::Page for About {
     }
 }
 
-use crate::TEXT;
-
 impl crate::View for About {
     fn ui(&mut self, ui: &mut egui::Ui) {
-        ui.heading("Robin Toncourt");
         ui.image(egui::include_image!("../../assets/Photo.jpeg"));
-        ui.label(TEXT["fr"]["about"].to_string());
+        ui.label(TEXT["fr"]["about"]["CONTENT"].to_string());
 
         ui.add_space(12.0);
 
@@ -41,7 +40,7 @@ fn links(ui: &mut egui::Ui) {
         "https://github.com/RobinToncourt"
     );
     ui.hyperlink_to(
-        format!("linkedin.com/in/toncourt-robin/"),
+        "linkedin.com/in/toncourt-robin/",
         "https://www.linkedin.com/in/toncourt-robin/"
     );
 }

@@ -2,8 +2,8 @@
 pub struct Education {}
 
 impl crate::Page for Education {
-    fn name(&self) -> &'static str {
-        "Formation"
+    fn name(&self) -> String {
+        "Formation".to_string()
     }
 
     fn show(&mut self, ctx: &egui::Context, open: &mut bool) {

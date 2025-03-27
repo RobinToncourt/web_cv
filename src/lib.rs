@@ -1,4 +1,4 @@
-#![warn(clippy::all, rust_2018_idioms)]
+#![warn(clippy::all)]
 
 mod app;
 pub use app::TemplateApp;
@@ -35,6 +35,6 @@ pub trait Page {
     fn is_enabled(&self, _ctx: &egui::Context) -> bool {
         true
     }
-    fn name(&self) -> &'static str;
+    fn name(&self) -> String;
     fn show(&mut self, ctx: &egui::Context, open: &mut bool);
 }

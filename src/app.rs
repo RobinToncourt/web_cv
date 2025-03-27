@@ -1,19 +1,13 @@
 use crate::content::menu::Menu;
 
+#[derive(Default)]
 pub struct TemplateApp {
     menu: Menu,
 }
 
-impl Default for TemplateApp {
-    fn default() -> Self {
-        Self {
-            menu: Menu::default(),
-        }
-    }
-}
-
 impl TemplateApp {
     /// Called once before the first frame.
+    #[must_use]
     pub fn new(cc: &eframe::CreationContext<'_>) -> Self {
         egui_extras::install_image_loaders(&cc.egui_ctx);
         // This is also where you can customize the look and feel of egui using
@@ -25,7 +19,7 @@ impl TemplateApp {
         //     return eframe::get_value(storage, eframe::APP_KEY).unwrap_or_default();
         // }
 
-        Default::default()
+        TemplateApp::default()
     }
 }
 

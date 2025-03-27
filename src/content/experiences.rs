@@ -4,8 +4,8 @@ use egui::CollapsingHeader;
 pub struct Experiences {}
 
 impl crate::Page for Experiences {
-    fn name(&self) -> &'static str {
-        "Expériences"
+    fn name(&self) -> String {
+        "Expériences".to_string()
     }
 
     fn show(&mut self, ctx: &egui::Context, open: &mut bool) {

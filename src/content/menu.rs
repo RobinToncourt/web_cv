@@ -36,13 +36,15 @@ impl Default for Menu {
             Box::<Projects>::default(),
             Box::<Games>::default(),
         ];
-        let open = BTreeSet::new();
+        let mut open = BTreeSet::new();
+
+        set_open(&mut open, &about.name(), true);
 
         Self {
+            open,
             about,
             experience_pages,
             hobby_pages,
-            open,
         }
     }
 }
@@ -70,9 +72,10 @@ impl Menu {
             });
 
         {
-            let mut is_open = self.open.contains(self.about.name());
+            let about_name = self.about.name();
+            let mut is_open = self.open.contains(&about_name);
             self.about.show(ctx, &mut is_open);
-            set_open(&mut self.open, self.about.name(), is_open);
+            set_open(&mut self.open, &about_name, is_open);
         }
 
         for page in &mut self.experience_pages {
@@ -86,39 +89,39 @@ impl Menu {
     }
 
     fn toggle_about(&mut self, ui: &mut egui::Ui) {
-        let mut is_open = self.open.contains(self.about.name());
-        ui.toggle_value(&mut is_open, self.about.name());
-        set_open(&mut self.open, self.about.name(), is_open);
+        let about_name = self.about.name();
+        let mut is_open = self.open.contains(&about_name);
+        ui.toggle_value(&mut is_open, &about_name);
+        set_open(&mut self.open, &about_name, is_open);
     }
 
     fn toggle_experience(&mut self, ui: &mut egui::Ui) {
         for page in &self.experience_pages {
-            let mut is_open = self.open.contains(page.name());
-            ui.toggle_value(&mut is_open, page.name());
-            set_open(&mut self.open, page.name(), is_open);
+            let page_name = page.name();
+            let mut is_open = self.open.contains(&page_name);
+            ui.toggle_value(&mut is_open, &page_name);
+            set_open(&mut self.open, &page_name, is_open);
         }
     }
 
     fn toggle_hobby(&mut self, ui: &mut egui::Ui) {
         for page in &self.hobby_pages {
-            let mut is_open = self.open.contains(page.name());
-            ui.toggle_value(&mut is_open, page.name());
-            set_open(&mut self.open, page.name(), is_open);
+            let page_name = page.name();
+            let mut is_open = self.open.contains(&page_name);
+            ui.toggle_value(&mut is_open, &page_name);
+            set_open(&mut self.open, &page_name, is_open);
         }
     }
 }
 
 fn show(ctx: &egui::Context, open: &mut BTreeSet<String>, page: &mut Box<dyn Page>) {
-    let mut is_open = open.contains(page.name());
+    let page_name = page.name();
+    let mut is_open = open.contains(&page_name);
     page.show(ctx, &mut is_open);
-    set_open(open, page.name(), is_open);
+    set_open(open, &page_name, is_open);
 }
 
-fn toggle() {
-
-}
-
-fn set_open(open: &mut BTreeSet<String>, key: &'static str, is_open: bool) {
+fn set_open(open: &mut BTreeSet<String>, key: &str, is_open: bool) {
     if is_open {
         if !open.contains(key) {
             open.insert(key.to_owned());

@@ -2,8 +2,8 @@
 pub struct Skills {}
 
 impl crate::Page for Skills {
-    fn name(&self) -> &'static str {
-        "Compétences"
+    fn name(&self) -> String {
+        "Compétences".to_string()
     }
 
     fn show(&mut self, ctx: &egui::Context, open: &mut bool) {
