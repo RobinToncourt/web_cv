@@ -24,6 +24,7 @@ eframe = { version = "0.30", default-features = false, features = [
     "persistence",   # Enable restoring app state when restarting the app.
     "wayland",       # To support Linux (and CI)
 ] }
+emath = "0.30"
 log = "0.4"
 
 lazy_static = "1.5.0"
