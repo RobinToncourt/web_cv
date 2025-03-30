@@ -4,7 +4,6 @@ use crate::Lang;
 
 pub struct TemplateApp {
     menu: Menu,
-    lang: Lang,
 }
 
 impl TemplateApp {
@@ -31,7 +30,6 @@ impl Default for TemplateApp {
     fn default() -> Self {
         Self {
             menu: Menu::default(),
-            lang: Lang::Français,
         }
     }
 }
@@ -67,7 +65,7 @@ impl eframe::App for TemplateApp {
         egui::TopBottomPanel::top("top_panel").show(ctx, |ui| {
             // The top panel is often a good place for a menu bar:
 
-            let lang = &mut self.lang;
+            let lang: &mut Lang = &mut crate::LANG.lock().unwrap();
 
             egui::menu::bar(ui, |ui| {
                 egui::widgets::global_theme_preference_buttons(ui);

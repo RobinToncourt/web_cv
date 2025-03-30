@@ -23,5 +23,15 @@ impl crate::Page for Movies {
 impl crate::View for Movies {
     fn ui(&mut self, ui: &mut egui::Ui) {
         ui.label("TODO: content");
+
+        if ui.button("test lang").clicked() {
+            println!("{:?}", crate::LANG.lock().unwrap().get_code());
+        }
+    }
+}
+
+macro_rules! t {
+    ($($arg:tt)*) => {
+
     }
 }

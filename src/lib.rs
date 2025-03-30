@@ -3,17 +3,17 @@
 mod app;
 pub use app::TemplateApp;
 
-mod constants;
 pub mod content;
 
 mod json;
 
-use std::sync::Mutex;
+use std::sync::{Arc, Mutex};
 
 use json::{parse_json, Null, Value};
 use lazy_static::lazy_static;
 
 lazy_static! {
+    static ref LANG: Arc<Mutex<Lang>> = Arc::new(Mutex::new(Lang::Français));
     static ref ERROR: Mutex<String> = Mutex::new(String::new());
     static ref TEXT: Value = {
         match parse_json(std::str::from_utf8(include_bytes!("../assets/content.json")).unwrap()) {
