@@ -1,7 +1,4 @@
-// TODO
-// -Rajouter contexte.
-// -Traduire.
-pub static JSON: &str = r#"{
+{
     "fr": {
         "about": {
             "TITLE": "Robin Toncourt",
@@ -182,6 +179,8 @@ License d'un an en alternance suivi de deux ans de master en alterance.",
 BTS, avec stage de 1 mois
 Option SLAM (Solution Logiciel et Application Métier)"
         }
+    },
+    "en": {
+
     }
 }
-"#;

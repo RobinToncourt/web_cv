@@ -1,8 +1,10 @@
 use crate::content::menu::Menu;
 
-#[derive(Default)]
+use crate::Lang;
+
 pub struct TemplateApp {
     menu: Menu,
+    lang: Lang,
 }
 
 impl TemplateApp {
@@ -21,8 +23,15 @@ impl TemplateApp {
 
         configure_text_styles(&cc.egui_ctx);
 
+        Self::default()
+    }
+}
+
+impl Default for TemplateApp {
+    fn default() -> Self {
         Self {
             menu: Menu::default(),
+            lang: Lang::Français,
         }
     }
 }
@@ -58,8 +67,19 @@ impl eframe::App for TemplateApp {
         egui::TopBottomPanel::top("top_panel").show(ctx, |ui| {
             // The top panel is often a good place for a menu bar:
 
+            let lang = &mut self.lang;
+
             egui::menu::bar(ui, |ui| {
                 egui::widgets::global_theme_preference_buttons(ui);
+                egui::ComboBox::from_label("Langue")
+                    .selected_text(format!("{lang:?}"))
+                    .show_ui(ui, |ui| {
+                        ui.selectable_value(lang, Lang::Français, "Français");
+                        ui.selectable_value(lang, Lang::English, "English");
+                    });
+                if ui.button("test lang").clicked() {
+                    println!("{:?}", lang.get_code());
+                }
             });
         });
 

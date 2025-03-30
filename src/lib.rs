@@ -16,7 +16,7 @@ use lazy_static::lazy_static;
 lazy_static! {
     static ref ERROR: Mutex<String> = Mutex::new(String::new());
     static ref TEXT: Value = {
-        match parse_json(crate::constants::JSON) {
+        match parse_json(std::str::from_utf8(include_bytes!("../assets/content.json")).unwrap()) {
             Ok(v) => v,
             Err(e) => {
                 ERROR.lock().unwrap().push_str(&e.to_string());
@@ -36,4 +36,19 @@ pub trait Page {
     }
     fn name(&self) -> String;
     fn show(&mut self, ctx: &egui::Context, open: &mut bool);
+}
+
+#[derive(Debug, PartialEq)]
+pub enum Lang {
+    Français,
+    English,
+}
+
+impl Lang {
+    fn get_code(&self) -> String {
+        match self {
+            Lang::Français => "fr".to_string(),
+            Lang::English => "en".to_string(),
+        }
+    }
 }
