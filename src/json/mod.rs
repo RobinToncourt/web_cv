@@ -6,6 +6,12 @@ use std::str::Chars;
 
 use anyhow::anyhow;
 
+pub trait Getter<T> {
+    type Output;
+
+    fn get(&self, index: T) -> Option<&Self::Output>;
+}
+
 #[derive(Debug, PartialEq)]
 pub struct Null;
 impl fmt::Display for Null {
@@ -66,6 +72,39 @@ impl Index<usize> for Value {
         match self {
             Value::Array(array) => &array[index],
             _ => panic!("{self} can't be indexed by {index}."),
+        }
+    }
+}
+
+impl Getter<&str> for Value {
+    type Output = Self;
+
+    fn get(&self, index: &str) -> Option<&Self::Output> {
+        match self {
+            Value::Object(object) => object.get(index),
+            _ => None,
+        }
+    }
+}
+
+impl Getter<String> for Value {
+    type Output = Self;
+
+    fn get(&self, index: String) -> Option<&Self::Output> {
+        match self {
+            Value::Object(object) => object.get(&index),
+            _ => None,
+        }
+    }
+}
+
+impl Getter<usize> for Value {
+    type Output = Self;
+
+    fn get(&self, index: usize) -> Option<&Self::Output> {
+        match self {
+            Value::Array(array) => array.get(index),
+            _ => None,
         }
     }
 }
@@ -210,34 +249,39 @@ fn parse_number(chars: &mut Peekable<Chars>, first: char) -> anyhow::Result<f64>
 mod json_test {
     use super::*;
 
-    const TEXT: &str = r#"
-        {
-        "glossary": {
+    const TEXT: &str = r#"{
+    "glossary": {
         "title": "example glossary",
         "GlossDiv": {
-        "title": "S",
-        "GlossList": {
-        "GlossEntry": {
-        "ID": "SGML",
-        "SortAs": "SGML",
-        "GlossTerm": "Standard Generalized Markup Language",
-        "Acronym": "SGML",
-        "Abbrev": "ISO 8879:1986",
-        "GlossDef": {
-        "para": "A meta-markup language, used to create markup languages such as DocBook.",
-        "GlossSeeAlso": ["GML", "XML"]
+            "title": "S",
+            "GlossList": {
+                "GlossEntry": {
+                    "ID": "SGML",
+                    "SortAs": "SGML",
+                    "GlossTerm": "Standard Generalized Markup Language",
+                    "Acronym": "SGML",
+                    "Abbrev": "ISO 8879:1986",
+                    "GlossDef": {
+                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
+                        "GlossSeeAlso": ["GML", "XML"]
+                    },
+                "GlossSee": "markup",
+                "SomeNull": null
+                }
+            }
+        }
     },
-    "GlossSee": "markup",
-    "SomeNull": null
+"autre": "rien",
+"nothing": "",
+"guillemet": "\""
+}"#;
+
+    #[test]
+    fn test_getter() {
+        let json = parse_json(TEXT).unwrap();
+
+        assert!(json.get("glossary").is_some());
     }
-    }
-    }
-    },
-    "autre": "rien",
-    "nothing": "",
-    "guillemet": "\""
-    }
-    "#;
 
     #[test]
     fn test_parse_string() {
