@@ -1,17 +1,8 @@
 use crate::content::menu::Menu;
 
-use egui::Slider;
-
-use crate::FontsSizer;
-
-const MIN_FONTS_SIZE: FontsSizer = FontsSizer{ fonts_size: 4.0 };
-const MAX_FONTS_SIZE: FontsSizer = FontsSizer{ fonts_size: 40.0 };
-const GLOBAL_FONTS_SIZE_RANGE: std::ops::RangeInclusive<FontsSizer> = MIN_FONTS_SIZE..=MAX_FONTS_SIZE;
-
 #[derive(Default)]
 pub struct TemplateApp {
     menu: Menu,
-    global_fonts_size: f32,
 }
 
 impl TemplateApp {
@@ -32,7 +23,6 @@ impl TemplateApp {
 
         Self {
             menu: Menu::default(),
-            global_fonts_size: 12.0
         }
     }
 }
@@ -68,21 +58,9 @@ impl eframe::App for TemplateApp {
         egui::TopBottomPanel::top("top_panel").show(ctx, |ui| {
             // The top panel is often a good place for a menu bar:
 
-            let mut fonts_sizer = FontsSizer{ fonts_size: self.global_fonts_size };
-
             egui::menu::bar(ui, |ui| {
                 egui::widgets::global_theme_preference_buttons(ui);
-                ui.add(
-                    Slider::new(
-                        &mut fonts_sizer,
-                        GLOBAL_FONTS_SIZE_RANGE
-                    )
-                    .max_decimals(1)
-                );
-
             });
-
-            self.global_fonts_size = fonts_sizer.fonts_size;
         });
 
         egui::CentralPanel::default().show(ctx, |ui| {
