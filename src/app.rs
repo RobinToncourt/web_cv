@@ -2,6 +2,7 @@ use crate::content::menu::Menu;
 
 use crate::Lang;
 
+#[derive(Default)]
 pub struct TemplateApp {
     menu: Menu,
 }
@@ -23,14 +24,6 @@ impl TemplateApp {
         configure_text_styles(&cc.egui_ctx);
 
         Self::default()
-    }
-}
-
-impl Default for TemplateApp {
-    fn default() -> Self {
-        Self {
-            menu: Menu::default(),
-        }
     }
 }
 
