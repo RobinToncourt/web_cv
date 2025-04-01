@@ -1,3 +1,5 @@
+use crate::t;
+
 #[derive(Default)]
 pub struct Movies {}
 
@@ -24,14 +26,11 @@ impl crate::View for Movies {
     fn ui(&mut self, ui: &mut egui::Ui) {
         ui.label("TODO: content");
 
+        ui.label(t!["about", "CONTENT"]);
+
         if ui.button("test lang").clicked() {
-            println!("{:?}", crate::LANG.lock().unwrap().get_code());
+            println!("{:}", crate::LANG.lock().unwrap().get_code());
         }
     }
 }
 
-macro_rules! t {
-    ($($arg:tt)*) => {
-
-    }
-}

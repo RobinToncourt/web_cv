@@ -1,5 +1,6 @@
 {
     "fr": {
+        "not_found": "Texte non trouvé.",
         "about": {
             "TITLE": "Robin Toncourt",
             "CONTENT": "Déterminé, sérieux, autonome et conscient du
@@ -181,6 +182,6 @@ Option SLAM (Solution Logiciel et Application Métier)"
         }
     },
     "en": {
-
+        "not_found": "Text not found."
     }
 }

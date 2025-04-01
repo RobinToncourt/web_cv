@@ -6,6 +6,7 @@ pub use app::TemplateApp;
 pub mod content;
 
 mod json;
+use crate::json::Getter;
 
 use std::sync::{Arc, Mutex};
 
@@ -25,6 +26,37 @@ lazy_static! {
         }
     };
 }
+
+const NOT_FOUND_INDEX: &str = "not_found";
+/// # Panics
+///
+/// Can't panic.
+#[must_use]
+pub fn search_content(indexes: &[&str]) -> String {
+    let lang_code = crate::LANG.lock().unwrap().get_code();
+    let not_found_text = crate::TEXT[lang_code.as_str()][NOT_FOUND_INDEX].to_string();
+
+    let not_found = crate::json::Value::String(not_found_text);
+    let mut result = &crate::TEXT[lang_code];
+
+    for index in indexes {
+        if let Some(res) = result.get(*index) {
+            result = res;
+        } else {
+            return not_found.to_string();
+        }
+    }
+
+    result.to_string()
+}
+
+#[macro_export]
+macro_rules! t {
+    ($($args:tt),*) => {
+        $crate::search_content(&[$($args),+])
+    };
+}
+
 
 pub trait View {
     fn ui(&mut self, ui: &mut egui::Ui);

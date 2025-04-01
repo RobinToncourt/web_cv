@@ -36,9 +36,9 @@ impl Default for TemplateApp {
 
 /// Text sizes.
 fn configure_text_styles(ctx: &egui::Context) {
-    use std::collections::BTreeMap;
     use egui::FontId;
     use egui::TextStyle;
+    use std::collections::BTreeMap;
 
     let text_styles: BTreeMap<TextStyle, FontId> = [
         (TextStyle::Heading, FontId::proportional(25.0)),
@@ -46,7 +46,8 @@ fn configure_text_styles(ctx: &egui::Context) {
         (TextStyle::Monospace, FontId::monospace(12.0)),
         (TextStyle::Button, FontId::proportional(12.0)),
         (TextStyle::Small, FontId::proportional(8.0)),
-    ].into();
+    ]
+    .into();
 
     ctx.all_styles_mut(move |style| style.text_styles = text_styles.clone());
 }
@@ -75,9 +76,6 @@ impl eframe::App for TemplateApp {
                         ui.selectable_value(lang, Lang::Français, "Français");
                         ui.selectable_value(lang, Lang::English, "English");
                     });
-                if ui.button("test lang").clicked() {
-                    println!("{:?}", lang.get_code());
-                }
             });
         });
 
