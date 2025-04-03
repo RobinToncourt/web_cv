@@ -3,8 +3,6 @@ use crate::t;
 #[derive(Default)]
 pub struct About {}
 
-use crate::TEXT;
-
 impl crate::Page for About {
     fn name(&self) -> String {
         t!["about", "TITLE"]
