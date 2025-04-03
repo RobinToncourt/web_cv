@@ -1,6 +1,8 @@
 {
     "fr": {
         "not_found": "Texte non trouvé.",
+        "fonts_size": "Taille de la police",
+        "lang_label": "Langue",
         "about": {
             "TITLE": "Robin Toncourt",
             "CONTENT": "Déterminé, sérieux, autonome et conscient du
@@ -179,9 +181,28 @@ License d'un an en alternance suivi de deux ans de master en alterance.",
             "BTS": " • 2016-2018 : BTS Service Informatique aux Organisation option Solutions Logicielles et applications métiers
 BTS, avec stage de 1 mois
 Option SLAM (Solution Logiciel et Application Métier)"
+        },
+        "movies": {
+            "TITLE": "Films"
         }
     },
     "en": {
-        "not_found": "Text not found."
+        "not_found": "Text not found.",
+        "fonts_size": "Font size",
+        "lang_label": "Language",
+        "about": {
+            "TITLE": "Robin Toncourt",
+            "CONTENT": "Serious and willingfull, I am aware of the work to be
+done. I am convinced that I can be a plus to your team !"
+        },
+        "exp": {
+        },
+        "skills": {
+        },
+        "edu": {
+        },
+        "movies": {
+            "TITLE": "Movies"
+        }
     }
 }

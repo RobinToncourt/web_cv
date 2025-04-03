@@ -1,3 +1,5 @@
+use crate::t;
+
 #[derive(Default)]
 pub struct About {}
 
@@ -5,7 +7,7 @@ use crate::TEXT;
 
 impl crate::Page for About {
     fn name(&self) -> String {
-        TEXT["fr"]["about"]["TITLE"].to_string()
+        t!["about", "TITLE"]
     }
 
     fn show(&mut self, ctx: &egui::Context, open: &mut bool) {
@@ -27,7 +29,7 @@ impl crate::View for About {
         ui.image(egui::include_image!(
             "../../assets/photo_side_cropped_reversed.jpg"
         ));
-        ui.label(TEXT["fr"]["about"]["CONTENT"].to_string());
+        ui.label(t!["about", "CONTENT"]);
 
         ui.add_space(12.0);
 
