@@ -14,12 +14,12 @@ jobs:
 
     checkout:
       steps:
-          name: Checkout
+        - name: Checkout
           uses: actions/checkout@v3
 
     dependencies:
       steps:
-          name: Install dependencies
+        - name: Install dependencies
           run: |
             cargo install trunk || true \
               && rustup target add wasm32-unknown-unknown
@@ -27,27 +27,14 @@ jobs:
     build:
       needs: checkout, dependencies
       steps:
-          name: abc
+        - name: abc
           run: trunk build --public-url ${{ github.event.repository.name }}
 
     deploy:
       needs: build
       steps:
-          name: Setup Pages
+        - name: Setup Pages
           uses: actions/configure-pages@v2
   
-          name: Deploy_Pages
+        - name: Deploy_Pages
           uses: actions/deploy-pages@v1
-
-  # deploy:
-  #   needs: build
-  #
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Deploy to GitHub Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v1
