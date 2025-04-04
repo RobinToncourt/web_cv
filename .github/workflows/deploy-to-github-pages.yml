@@ -29,3 +29,39 @@ jobs:
 
       - name: Deploy Pages
         uses: actions/deploy-pages@v1
+
+    checkout:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+    dependencies:
+      - name: Install dependencies
+        run: |
+          cargo install trunk || true \
+            && rustup target add wasm32-unknown-unknown
+
+    build:
+        needs: checkout, dependencies
+      - name: Build the Rust WASM app and all of its assets
+        run: trunk build --public-url ${{ github.event.repository.name }}
+
+    deploy:
+        needs: build
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+
+      - name: Deploy Pages
+        uses: actions/deploy-pages@v1
+
+  # deploy:
+  #   needs: build
+  #
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Deploy to GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v1
