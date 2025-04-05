@@ -55,7 +55,7 @@ jobs:
 
     environment:
       name: github-pages
-      url: ${{ github.event.repository.name }}/web_cv
+      url: https://robintoncourt.github.io/web_cv/
 
     runs-on: ubuntu-latest
     steps:
