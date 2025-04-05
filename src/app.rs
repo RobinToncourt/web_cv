@@ -67,25 +67,25 @@ impl eframe::App for TemplateApp {
         // Put your widgets into a `SidePanel`, `TopBottomPanel`, `CentralPanel`, `Window` or `Area`.
         // For inspiration and more examples, go to https://emilk.github.io/egui
 
-        // {
-        //     ctx.all_styles_mut(|style| {
-        //         for (text_style, font_id) in &mut style.text_styles {
-        //             match text_style {
-        //                 TextStyle::Heading =>
-        //                 font_id.size = self.global_fonts_size + 13.0,
-        //                 TextStyle::Small =>
-        //                 font_id.size = self.global_fonts_size - 4.0,
-        //                 _ =>font_id.size = self.global_fonts_size,
-        //             }
-        //         }
-        //     });
-        // }
+        {
+            ctx.all_styles_mut(|style| {
+                for (text_style, font_id) in &mut style.text_styles {
+                    match text_style {
+                        TextStyle::Heading =>
+                        font_id.size = self.global_fonts_size + 13.0,
+                        TextStyle::Small =>
+                        font_id.size = self.global_fonts_size - 4.0,
+                        _ =>font_id.size = self.global_fonts_size,
+                    }
+                }
+            });
+        }
 
         egui::TopBottomPanel::top("top_panel").show(ctx, |ui| {
             // The top panel is often a good place for a menu bar:
 
             let lang_label = t!["lang_label"];
-            // let font_size_label = t!["fonts_size"];
+            let font_size_label = t!["fonts_size"];
 
             egui::menu::bar(ui, |ui| {
                 egui::widgets::global_theme_preference_buttons(ui);
@@ -97,13 +97,12 @@ impl eframe::App for TemplateApp {
                         ui.selectable_value(lang, Lang::Français, "Français");
                         ui.selectable_value(lang, Lang::English, "English");
                     });
-                // ui.label(font_size_label);
-                // ui.add(
-                //     egui::Slider::new(
-                //         &mut self.global_fonts_size,
-                //         8.0..=20.0
-                //     )
-                // );
+
+                ui.label(font_size_label);
+                ui.add(egui::DragValue::new(&mut self.global_fonts_size)
+                    .speed(1.0)
+                    .range(8.0..=20.0)
+                );
             });
         });
 
