@@ -37,11 +37,14 @@ jobs:
             && rustup target add wasm32-unknown-unknown
 
       - name: Build the Rust WASM app and all of its assets
-        run: trunk build --public-url ${{ github.event.repository.name }}
+        run: trunk build --public-url ./${{ github.event.repository.name }}
 
       - name: Show default environment variables
         run: |
-          echo ${{ steps.deployment.outputs.page_url }}
+          echo "name"
+          echo '${{ github.event.repository.name }}'
+          echo "page_url"
+          echo '${{ steps.deployment.outputs.page_url }}'
 
       - name: Setup Pages
         uses: actions/configure-pages@v2
@@ -55,7 +58,7 @@ jobs:
 
     environment:
       name: github-pages
-      url: https://robintoncourt.github.io/web_cv/
+      url: ${{ steps.deployment.outputs.page_url }}
 
     runs-on: ubuntu-latest
     steps:
