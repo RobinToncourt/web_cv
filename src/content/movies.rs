@@ -27,4 +27,3 @@ impl crate::View for Movies {
         ui.label("TODO: content");
     }
 }
-

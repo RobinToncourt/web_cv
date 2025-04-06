@@ -5,8 +5,8 @@ use std::collections::BTreeMap;
 use egui::FontId;
 use egui::TextStyle;
 
-use crate::Lang;
 use crate::t;
+use crate::Lang;
 
 pub struct TemplateApp {
     menu: Menu,
@@ -71,11 +71,9 @@ impl eframe::App for TemplateApp {
             ctx.all_styles_mut(|style| {
                 for (text_style, font_id) in &mut style.text_styles {
                     match text_style {
-                        TextStyle::Heading =>
-                        font_id.size = self.global_fonts_size + 13.0,
-                        TextStyle::Small =>
-                        font_id.size = self.global_fonts_size - 4.0,
-                        _ =>font_id.size = self.global_fonts_size,
+                        TextStyle::Heading => font_id.size = self.global_fonts_size + 13.0,
+                        TextStyle::Small => font_id.size = self.global_fonts_size - 4.0,
+                        _ => font_id.size = self.global_fonts_size,
                     }
                 }
             });
@@ -99,10 +97,17 @@ impl eframe::App for TemplateApp {
                     });
 
                 ui.label(font_size_label);
-                ui.add(egui::DragValue::new(&mut self.global_fonts_size)
-                    .speed(1.0)
-                    .range(8.0..=20.0)
+                if ui.add(egui::Button::new("-")).clicked() && self.global_fonts_size > 8.0 {
+                    self.global_fonts_size -= 1.0;
+                }
+                ui.add(
+                    egui::DragValue::new(&mut self.global_fonts_size)
+                        .speed(1.0)
+                        .range(8.0..=20.0),
                 );
+                if ui.add(egui::Button::new("+")).clicked() && self.global_fonts_size < 20.0 {
+                    self.global_fonts_size += 1.0;
+                }
             });
         });
 
