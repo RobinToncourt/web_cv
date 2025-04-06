@@ -32,6 +32,7 @@ impl Default for Menu {
         let mut open = BTreeSet::new();
 
         set_open(&mut open, &about.name(), true);
+        set_open(&mut open, &hobby_pages[0].name(), true);
 
         Self {
             open,
