@@ -32,6 +32,7 @@ impl Default for Menu {
         let mut open = BTreeSet::new();
 
         set_open(&mut open, &about.name(), true);
+        //set_open(&mut open, &hobby_pages[0].name(), true);
 
         Self {
             open,
@@ -55,13 +56,13 @@ impl Menu {
                 ui.heading("Expériences");
                 ui.separator();
                 self.toggle_experience(ui);
-                ui.add_space(12.0);
-                ui.heading("Passe temps");
-                ui.separator();
-                self.toggle_hobby(ui);
-                ui.add_space(12.0);
-                ui.heading("Questions");
-                ui.separator();
+                // ui.add_space(12.0);
+                // ui.heading("Passe temps");
+                // ui.separator();
+                // self.toggle_hobby(ui);
+                // ui.add_space(12.0);
+                // ui.heading("Questions");
+                // ui.separator();
             });
 
         {

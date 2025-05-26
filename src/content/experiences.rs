@@ -1,5 +1,7 @@
 use egui::CollapsingHeader;
 
+use crate::show_array_cell_by_line;
+
 #[derive(Default)]
 pub struct Experiences {}
 
@@ -58,6 +60,7 @@ fn add_infos(of: &str, ui: &mut egui::Ui) {
         .id_salt(TEXT["fr"]["exp"][format!("{of}_ID")].to_string())
         .show(ui, |ui| {
             ui.label(TEXT["fr"]["exp"][format!("{of}_MISSION")].to_string());
-            ui.label(TEXT["fr"]["exp"][format!("{of}_TECHNOS")].to_string());
+            ui.label(TEXT["fr"]["env"].to_string());
+            show_array_cell_by_line(&TEXT["fr"]["exp"][format!("{of}_ENV")], Some(">"), ui);
         });
 }

@@ -50,6 +50,18 @@ pub fn search_content(indexes: &[&str]) -> String {
     result.to_string()
 }
 
+fn show_array_cell_by_line(value: &Value, prefix: Option<&str>, ui: &mut egui::Ui) {
+    let prefix: &str = prefix.unwrap_or("");
+    match value {
+        Value::Array(array) => {
+            for e in array {
+                ui.label(format!("{prefix}{e}"));
+            }
+        }
+        _ => panic!("Not an array."),
+    }
+}
+
 #[macro_export]
 macro_rules! t {
     ($($args:tt),*) => {
