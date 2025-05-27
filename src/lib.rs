@@ -50,6 +50,23 @@ pub fn search_content(indexes: &[&str]) -> String {
     result.to_string()
 }
 
+/// # Panics
+///
+/// Can't panic.
+#[must_use]
+pub fn search_array<'a>(indexes: &'a [&str]) -> &'a Value {
+    let lang_code = crate::LANG.lock().unwrap().get_code();
+    let mut result = &crate::TEXT[lang_code];
+
+    for index in indexes {
+        if let Some(res) = result.get(*index) {
+            result = res;
+        }
+    }
+
+    result
+}
+
 fn show_array_cell_by_line(value: &Value, prefix: Option<&str>, ui: &mut egui::Ui) {
     let prefix: &str = prefix.unwrap_or("");
     match value {

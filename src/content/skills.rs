@@ -1,11 +1,12 @@
-use crate::show_array_cell_by_line;
+use crate::{search_array, show_array_cell_by_line};
+use crate::t;
 
 #[derive(Default)]
 pub struct Skills {}
 
 impl crate::Page for Skills {
     fn name(&self) -> String {
-        "Compétences".to_string()
+        t!["skills", "skills"]
     }
 
     fn show(&mut self, ctx: &egui::Context, open: &mut bool) {
@@ -22,20 +23,18 @@ impl crate::Page for Skills {
     }
 }
 
-use crate::TEXT;
-
 impl crate::View for Skills {
     fn ui(&mut self, ui: &mut egui::Ui) {
         ui.heading("Langages");
-        show_array_cell_by_line(&TEXT["fr"]["skills"]["PROG_LANG"], None, ui);
+        show_array_cell_by_line(search_array(&["skills", "PROG_LANG"]), None, ui);
         ui.separator();
         ui.heading("Outils");
-        show_array_cell_by_line(&TEXT["fr"]["skills"]["TOOLS"], None, ui);
+        show_array_cell_by_line(search_array(&["skills", "TOOLS"]), None, ui);
         ui.separator();
         ui.heading("Environnement");
-        show_array_cell_by_line(&TEXT["fr"]["skills"]["ENV"], None, ui);
+        show_array_cell_by_line(search_array(&["skills", "ENV"]), None, ui);
         ui.separator();
         ui.heading("Langues");
-        show_array_cell_by_line(&TEXT["fr"]["skills"]["LANG"], None, ui);
+        show_array_cell_by_line(search_array(&["skills", "LANG"]), None, ui);
     }
 }

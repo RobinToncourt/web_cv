@@ -1,9 +1,11 @@
+use crate::t;
+
 #[derive(Default)]
 pub struct Education {}
 
 impl crate::Page for Education {
     fn name(&self) -> String {
-        "Formation".to_string()
+        t!["edu", "edu"]
     }
 
     fn show(&mut self, ctx: &egui::Context, open: &mut bool) {
@@ -20,12 +22,15 @@ impl crate::Page for Education {
     }
 }
 
-use crate::TEXT;
-
 impl crate::View for Education {
     fn ui(&mut self, ui: &mut egui::Ui) {
-        ui.heading(TEXT["fr"]["edu"]["ADA"].to_string());
-        ui.heading(TEXT["fr"]["edu"]["EPSI"].to_string());
-        ui.heading(TEXT["fr"]["edu"]["BTS"].to_string());
+        ui.heading(t!["edu", "ADA", "TITLE"]);
+        ui.label(t!["edu", "ADA", "CONTENT"]);
+        ui.add_space(12.0);
+        ui.heading(t!["edu", "EPSI", "TITLE"]);
+        ui.label(t!["edu", "EPSI", "CONTENT"]);
+        ui.add_space(12.0);
+        ui.heading(t!["edu", "BTS", "TITLE"]);
+        ui.label(t!["edu", "BTS", "CONTENT"]);
     }
 }

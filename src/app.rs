@@ -8,6 +8,8 @@ use egui::TextStyle;
 use crate::t;
 use crate::Lang;
 
+const GLOBAL_FONTS_SIZE_BASE: f32 = 14.0;
+
 pub struct TemplateApp {
     menu: Menu,
     global_fonts_size: f32,
@@ -17,7 +19,7 @@ impl Default for TemplateApp {
     fn default() -> Self {
         Self {
             menu: Menu::default(),
-            global_fonts_size: 12.0,
+            global_fonts_size: GLOBAL_FONTS_SIZE_BASE,
         }
     }
 }
@@ -44,12 +46,13 @@ impl TemplateApp {
 
 /// Text sizes.
 fn configure_text_styles(ctx: &egui::Context) {
+    let font_size: f32 = GLOBAL_FONTS_SIZE_BASE;
     let text_styles: BTreeMap<TextStyle, FontId> = [
-        (TextStyle::Heading, FontId::proportional(25.0)),
-        (TextStyle::Body, FontId::proportional(12.0)),
-        (TextStyle::Monospace, FontId::monospace(12.0)),
-        (TextStyle::Button, FontId::proportional(12.0)),
-        (TextStyle::Small, FontId::proportional(8.0)),
+        (TextStyle::Heading, FontId::proportional(font_size + 13.0)),
+        (TextStyle::Body, FontId::proportional(font_size)),
+        (TextStyle::Monospace, FontId::monospace(font_size)),
+        (TextStyle::Button, FontId::proportional(font_size)),
+        (TextStyle::Small, FontId::proportional(font_size - 4.0)),
     ]
     .into();
 
