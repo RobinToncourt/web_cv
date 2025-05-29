@@ -18,60 +18,56 @@ un élément moteur au sein de votre structure !"
 
             "KNDS_BOURGES_ID": "knds_bourges_top_ready",
             "KNDS_BOURGES_TITLE": "Top&Ready",
-            "KNDS_BOURGES_DATES": "Janvier 2025 à ce jour",
-            "KNDS_BOURGES_MISSION": "Client : KNDS (ex-Nexter) à Bourges.
-
-KNDS demande à ce que le logiciel historique Top&Ready, deux logiciels installé sur le CAESAR, soientt modernisés.
+            "KNDS_BOURGES_CLIENT": "Client : KNDS (ex-Nexter) à Bourges.",
+            "KNDS_BOURGES_DATES": "De janvier 2025 à ce jour.",
+            "KNDS_BOURGES_MISSION": "KNDS demande à ce que le logiciel historique Top&Ready, deux logiciels installé sur le CAESAR, soient modernisés.
 Pour ce faire les différentes fonctionnalitées sont transformées en services.
-Cela permettra de faire plus facilement évoluer les logiciels ainsi qu'une meilleur maintenabilité.
-Il est aussi envisagé de se séparer de Microsoft MFC pour permettre une migration vers linux.
-J'ai du implémenter un service de communication entre le logiciel principal et la central inertielle.",
-            "KNDS_BOURGES_ENV": ["C++", "Git", "Jenkins"],
+Cela permettra de faire plus facilement évoluer les logiciels et permet une meilleur maintenabilité.
+Il est aussi envisagé de remplacer Microsoft MFC, pour l'IHM, pour permettre une migration vers Linux.
+J'ai du implémenter un service de communication entre les logiciels principaux et la central inertielle.
+J'ai aussi implémenté le service de communication entre le READY et la caméra thermique du CAESAR et modifié les interfaces graphiques pour qu'elles utilisent le nouveau service.",
+            "KNDS_BOURGES_ENV": ["C++", "Git", "Visual Studio C++", "Jenkins", "Sonarqube"],
 
             "THALES_ORLEANS_ID": "thales_orleans_trusttool",
             "THALES_ORLEANS_TITLE": "TrustTool",
-            "THALES_ORLEANS_DATES": "Septembre 2024 à décembre 2024",
-            "THALES_ORLEANS_MISSION": "Client : Thales à Fleury-les-Aubrais.
-
-Mise en place de séquences de tests pour le logiciel PAAMS sur l’outil Trust.
+            "THALES_ORLEANS_CLIENT": "Client : Thales à Fleury-les-Aubrais.",
+            "THALES_ORLEANS_DATES": "De septembre 2024 à décembre 2024.",
+            "THALES_ORLEANS_MISSION": "Mise en place de séquences de tests pour le logiciel PAAMS sur l’outil Trust.
 Le PAAMS (Principal Anti-Air Missile System) est le logiciel de protection antiaérienne navale employant le missile Aster.
-Le logiciel à subit une mise à niveau et les des tests doivent être réalisé, ces tests se fond par l’intermédiaire de l’outil Trust.
+Le logiciel à subit une mise à niveau et des tests doivent être réalisé, ces tests se fond par l’intermédiaire de l’outil Trust.
 Trust est un outil d’automatisation des tests via des séquences de déclenchement d’envoi de messages à intervalles défini par l’opérateur.
 Le développement des tests se font via l’IHM sur navigateur internet.",
-            "THALES_ORLEANS_ENV": ["Java", "Python", "Ada", "Git", "Jira", "Agilité"],
+            "THALES_ORLEANS_ENV": ["Java", "Python", "Ada", "Git", "Jira", "Agilité", "Jenkins", "Sonarqube"],
 
             "THALES_ETRELLES_ID": "thales_etrelles_b1nt_awg",
             "THALES_ETRELLES_TITLE": "B1NT-AWG",
-            "THALES_ETRELLES_DATES": "10/2023 au 10/2024",
-            "THALES_ETRELLES_MISSION": "Client : Thales à Etrelles.
-
-Développement d’une DLL et de séquences puis intégration sur le banc de test.
+            "THALES_ETRELLES_CLIENT": "Client : Thales à Etrelles.",
+            "THALES_ETRELLES_DATES": "De octobre 2023 à octobre 2024.",
+            "THALES_ETRELLES_MISSION": "Développement d’une DLL et de séquences puis intégration sur le banc de test.
 Le banc B1NT-AWG doit vérifier le bon fonctionnement de la carte AWG, pour ce faire des appareils sont disponibles pour contrôler les entrées et sorties de la carte.
 Dans un premier temps l’objectif est de produire une DLL faisant office d’interface entre les séquences TestStand et les différents appareils présents sur le banc.
 Ensuite utiliser cette DLL pour automatiser les tests via des séquences sur TestStand.
 Pour finir, l’intégration des composants sur le banc pour vérifier le bon fonctionnement et corriger les éventuels problèmes.",
-            "THALES_ETRELLES_ENV": ["C", "TestStand", "Jira", "Agilité"],
+            "THALES_ETRELLES_ENV": ["C", "TestStand", "LabWindows/CVI", "Jira", "Agilité"],
 
             "THALES_BREST_TBSL_ID": "thales_brest_tbsl_hmi",
             "THALES_BREST_TBSL_TITLE": "TBSL HMI",
-            "THALES_BREST_TBSL_DATES": "2 semaines",
-            "THALES_BREST_TBSL_MISSION": "Client : Thales à Brest.
-
-Portage d’une librairie propriétaire Thales de Linux vers Windows
-Le projet porte sur le portage, de Linux vers Windows, d’un logiciel de test de banc de carte embarquée dans une gamme de sonar bouée (Thales TUS).
-Le logiciel, écrit en Java, utilise une librairie native pour communiquer avec le matériel. J’ai dû faire le portage de cette librairie vers Windows.
+            "THALES_BREST_TBSL_CLIENT": "Client : Thales à Brest.",
+            "THALES_BREST_TBSL_DATES": "Pendant 2 semaines.",
+            "THALES_BREST_TBSL_MISSION": "Portage d’une librairie propriétaire Thales de Linux vers Windows.
+Le projet est le portage, de Linux vers Windows, d’un logiciel de test de banc de carte embarquée dans une gamme de sonar bouée (Thales TUS).
+Le logiciel, écrit en Java, utilise une librairie native pour communiquer avec le matériel. J’ai dû faire le portage de cette librairie de Linux vers Windows.
 Lors de cette mission, j’ai pu monter en compétence sur la migration de librairie de Linux vers Windows ainsi que sur la compilation de DLL.",
             "THALES_BREST_TBSL_ENV": ["C", "Linux", "Windows", "Visual Studio C++"],
 
             "THALES_BREST_SEA_ID": "thales_brest_sea_guardian",
             "THALES_BREST_SEA_TITLE": "Sea Guardian",
-            "THALES_BREST_SEA_DATES": "02/2023 au 08/2023",
-            "THALES_BREST_SEA_MISSION": "Client : Thales à Brest.
-
-Développeur Logiciel
-Le projet Sea Guardian est rattaché au service AEROPORTE de l’entité UWS (Under Water Systems) de Thales DMS.
-Ce projet a pour objectif de remplacer l’ATL2 par un drone, le but est que le drone ne soit qu’un relai entre les bouées et le centre de traitement des informations.
+            "THALES_BREST_SEA_CLIENT": "Client : Thales à Brest.",
+            "THALES_BREST_SEA_DATES": "De février 2023 à août 2023.",
+            "THALES_BREST_SEA_MISSION": "Le projet Sea Guardian est rattaché au service AEROPORTE de l’entité UWS (Under Water Systems) de Thales DMS(Defence Mission Systems).
+Ce projet a pour objectif de remplacer l’ATL2 par un drone, le but est que le drone ne soit qu’un relai entre les appareils et le centre de commandement.
 Je me suis occupé de la partie communication entre la partie vol (drone) et la partie sol (centre de traitement).
+J'ai du implémenter un service de communication pour pouvoir faire passer des message en UDP(sans vérification de bonne reception du message) ou en TCP(avec vérification de bonne reception du message).
 Sur cette mission, j’ai pu approfondir mes compétences en C++ et en agilité.",
             "THALES_BREST_SEA_ENV": ["C++", "Git", "Jira", "Agilité"],
 
@@ -79,81 +75,68 @@ Sur cette mission, j’ai pu approfondir mes compétences en C++ et en agilité.
 
             "THALES_BREST_MENACE_ID": "thales_brest_menace",
             "THALES_BREST_MENACE_TITLE": "Menace",
-            "THALES_BREST_MENACE_DATES": "12/2021 au 09/2022",
-            "THALES_BREST_MENACE_MISSION": "Client : Thales à Brest.
+            "THALES_BREST_MENACE_CLIENT": "Client : Thales à Brest.",
+            "THALES_BREST_MENACE_DATES": "De décembre 2021 à septembre 2022",
+            "THALES_BREST_MENACE_MISSION": "Menace est une application de référencement des menace détectés lors d'un vol par les instruments à bord. Mon implication sur ce projet a été de faire de la maintenance et des corrections de faits techniques(bugs).
+J’ai aussi dû faire des tests unitaires, des tests fonctionnels ainsi que des tests de non-régression.",
+            "THALES_BREST_MENACE_ENV": ["Java 8", "JavaFx", "Java Swing", "Git", "Agilité"],
 
-Développeur Logiciel
-Menace est une application de référencement des objets détectés. Mon implication sur ce projet a été de faire de la maintenance et des corrections de faits techniques, j’ai aussi dû faire des tests unitaires, des tests fonctionnels ainsi que des tests de non-régression.",
-            "THALES_BREST_MENACE_ENV": ["Java", "JavaFx", "Java Swing", "Git", "Agilité"],
-
-            "THALES_ALTERNANCE": "Octobre 2018 à septembre 2021 : Thales en alternance",
+            "THALES_ALTERNANCE": "Octobre 2018 à septembre 2021 : Alternance chez Thales",
 
             "THALES_BREST_SAMDIS_ID": "thales_brest_samdis",
             "THALES_BREST_SAMDIS_TITLE": "SAMDIS data analysis",
-            "THALES_BREST_SAMDIS_DATES": "24/09/2019 au 23/09/2021",
-            "THALES_BREST_SAMDIS_MISSION": "Client : Thales à Brest.
-
-Développeur Logiciel
-L’objectif de ce projet est de fournir une aide à l’analyse et au traitement de fichiers, documents, bases de données pour le développement du produit SAMDIS, développé dans le service Guerre Des Mines d’UWS.
-L’idée retenue a été un logiciel en Java principalement constitué d’une interface graphique, en JavaFX, extensible par des plugins, ces plugins sont conçus et implémentés par l’utilisateur.
+            "THALES_BREST_SAMDIS_DATES": "De septembre 2019 à septembre 2021",
+            "THALES_BREST_SAMDIS_MISSION": "L’objectif de ce projet est de fournir une aide à l’analyse et au traitement de fichiers, documents, bases de données pour le développement du produit SAMDIS, développé dans le service Guerre Des Mines d’UWS.
+L’idée retenue a été un logiciel en Java principalement constitué d’une interface graphique, en JavaFX, extensible par des plugins, ces plugins sont conçus, implémentés et partagé par les utilisateurs.
 Pour assurer une compatibilité avec les différents types de fichiers et librairies existantes, le logiciel supporte des plugins développés en Java ou en C/C++.
 Au cours du développement a été rajouté la possibilité de créer des graphiques pour comparer l’évolution de données dans le temps.
 Lors de ce projet j’ai beaucoup monté en compétence sur JavaFX et sur la conception d’IHM.",
-            "THALES_BREST_SAMDIS_ENV": ["Java", "JavaFx", "C", "JNI", "SqLite"],
+            "THALES_BREST_SAMDIS_ENV": ["Java 8", "JavaFx", "C", "JNI", "SqLite"],
 
             "THALES_BREST_CPP_TO_JAVA_ID": "thales_brest_cpp_to_java",
             "THALES_BREST_CPP_TO_JAVA_TITLE": "Étude des performances de Java",
-            "THALES_BREST_CPP_TO_JAVA_DATES": "01/10/2018 aux 24/09/2019",
-            "THALES_BREST_CPP_TO_JAVA_MISSION": "Client : Thales à Brest.
+            "THALES_BREST_CPP_TO_JAVA_DATES": "De septembre 2018 à septembre 2019",
+            "THALES_BREST_CPP_TO_JAVA_MISSION": "Le but de ce projet était de tester les performances de Java, dans un premier temps, puis de les comparer avec celle du C++.
+On m’a demandé de traduire, du C++ vers le Java, un programme pour ensuite faire différents tests de charge sur les deux versions et de les comparer.
+Les comparaisons ont été faites sur le temps d’exécution des méthodes importantes ainsi que sur la mémoire utilisée par la JVM.
+J’ai aussi eu à comparer les différents ramasse miettes, leurs efficacités et leurs vitesses d’exécutions.",
+            "THALES_BREST_CPP_TO_JAVA_ENV": ["Java 8", "C", "C++", "JNI"],
 
-Développeur Logiciel
-Le but de ce projet était de tester les performances de Java, dans un premier temps, puis de les comparer avec le C++. On m’a donc demandé de traduire, du C++ vers le Java, un programme pour ensuite faire différents tests de charge sur les deux versions et de les comparer. Les comparaisons ont été faites sur le temps d’exécution des méthodes importantes ainsi que sur la mémoire utilisée par la JVM. J’ai aussi comparé les différents ramasse miettes, leurs efficacités et leurs vitesses d’exécutions.",
-            "THALES_BREST_CPP_TO_JAVA_ENV": ["Java", "C", "C++", "JNI"],
-
-            "KERPAPE": "Stage de BTS: Kerpape",
+            "KERPAPE": "Stage de BTS: centre mutualiste de Kerpape",
 
             "KERPAPE_LORIENT_I2_ID": "kerpape_lorient_i2",
             "KERPAPE_LORIENT_I2_TITLE": "Annuaire des donateurs",
-            "KERPAPE_LORIENT_I2_DATES": "08/01/2018 au 23/02/2018",
-            "KERPAPE_LORIENT_I2_MISSION": "Client : Kerpape à Lorient.
-
-La fondation Kerpape vise à réunir des fond pour soutenir l'hopital et la recherche.
-La fondation souhaitait avoir un site WEB pour faciliter la recherche et la relance des donateurs.
+            "KERPAPE_LORIENT_I2_DATES": "Du 08/01/2018 au 23/02/2018",
+            "KERPAPE_LORIENT_I2_MISSION": "La fondation Kerpape vise à réunir des fond pour soutenir l'hopital et la recherche.
+La fondation souhaitait avoir un site WEB interne pour faciliter la recherche et la relance des donateurs.
 Le site offre les fonctionnnalitées suivantes:
 *L'affichage de tous les donateurs ainsi que le montant total de leurs donnations et d'autre informations personnelles.
 *Un page avec le détail de chaque donation, leurs dates et leurs montants.",
-            "KERPAPE_LORIENT_I2_ENV": ["PHP", "JavaScript", "Oracle DB", "MySql"],
+            "KERPAPE_LORIENT_I2_ENV": ["HTML", "CSS", "PHP", "JQuery (JavaScript)", "Oracle DB", "MySql"],
 
             "KERPAPE_LORIENT_SUMMER_ID": "kerpape_lorient_summer",
-            "KERPAPE_LORIENT_SUMMER_TITLE": "Annuaire des donateurs",
-            "KERPAPE_LORIENT_SUMMER_DATES": "28/06/2017 au 26/07/2017",
-            "KERPAPE_LORIENT_SUMMER_MISSION": "Client : Kerpape à Lorient.
-
-Même contexte que le 1er stage.
-Ce travail d'été est la continuation du 1er stage.",
-            "KERPAPE_LORIENT_SUMMER_ENV": ["PHP", "JavaScript", "Oracle DB", "MySql"],
+            "KERPAPE_LORIENT_SUMMER_TITLE": "Intranet",
+            "KERPAPE_LORIENT_SUMMER_DATES": "Du 28/06/2017 au 26/07/2017",
+            "KERPAPE_LORIENT_SUMMER_MISSION": "Même contexte que le 1er stage.
+Ce travail d'été est la suite et fin du 1er stage.",
+            "KERPAPE_LORIENT_SUMMER_ENV": ["HTML", "CSS", "PHP", "JQuery (JavaScript)", "Oracle DB", "MySql"],
 
             "KERPAPE_LORIENT_I1_ID": "kerpape_lorient_i1",
             "KERPAPE_LORIENT_I1_TITLE": "Intranet",
-            "KERPAPE_LORIENT_I1_DATES": "15/05/2017 au 23/06/2017",
-            "KERPAPE_LORIENT_I1_MISSION": "Client : Kerpape à Lorient.
+            "KERPAPE_LORIENT_I1_DATES": "Du 15/05/2017 au 23/06/2017",
+            "KERPAPE_LORIENT_I1_MISSION": "L'hopital utilise deux logiciels pour la gestion des clients.
+Un premier logiciel pour la saisie des entrèes/sorties des patients et un deuxième logiciel pour la gestion des plannings des patients.
+Les informations des patients saisies par le personnel, sur le premier, peuvent être éronées ce qui entraine un rejet par le deuxième logiciel.
+La correction de ces erreurs ce faisait, historiquement, en modifier les fichiers de rejet et en les renvoyant à la main.
 
-L'hopital utilise deux logiciels pour la gestion des clients.
-Un premier logiciel pour la saisie des entrèes/sorties des patients et
-un deuxième logiciel pour la gestion des plannings des patients.
-Les informations des patients saisies par le personnel, sur le premier, peuvent
-être éronées ce qui entraine un rejet par le deuxième logiciel.
-La correction de ces erreurs ce faisait, historiquement, en modifier les fichiers
-de rejet et en les renvoyant à la main.
-L'objectif de ce stage à été de créer une interface WEB pour faciliter et assister la correction des erreurs.
+L'objectif de ce stage à été de créer une interface WEB pour faciliter et assister dans la correction des erreurs.
 L'interface WEB fonctionne de la façon suivante:
-*Dans un premier temps la liste des rejets et affiché.
-*Ensuite, l'utilisateur choisi une erreur à corriger.
-*Le programme, lors de l'ouverture, va chercher à précompléter un maximum des
-informations manquantes ou pointer les informations contradictoires.
-*Pour finir, l'utilisateur applique les changements qui conviennent et envoi la
+ - Dans un premier temps la liste des rejets et affiché.
+ - Ensuite, l'utilisateur choisi une erreur à corriger.
+ - Le programme, lors de l'ouverture de l'erreur, va chercher à précompléter un maximum des informations manquantes ou pointer les informations contradictoires.
+ - Pour finir, l'utilisateur applique les changements qui conviennent et envoi la
 correction.",
-            "KERPAPE_LORIENT_I1_ENV": ["PHP", "JavaScript", "Oracle DB", "MySql"]
+            "KERPAPE_LORIENT_I1_ENV": ["HTML", "CSS", "PHP", "JQuery (JavaScript)", "Oracle DB", "MySql"]
         },
         "skills": {
             "skills": "Compétences",
@@ -178,7 +161,7 @@ correction.",
             "ENV": [
                 "Eclipse",
                 "QtCreator",
-                "Visual Studio 2017",
+                "Visual Studio C++",
                 "LabWindows/CVI",
                 "TestStand",
                 "Windows",

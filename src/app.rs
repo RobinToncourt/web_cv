@@ -89,7 +89,7 @@ impl eframe::App for TemplateApp {
             let font_size_label = t!["fonts_size"];
 
             egui::menu::bar(ui, |ui| {
-                egui::widgets::global_theme_preference_buttons(ui);
+                egui::widgets::global_theme_preference_switch(ui);
                 ui.label(lang_label);
                 let lang: &mut Lang = &mut crate::LANG.lock().unwrap();
                 egui::ComboBox::from_id_salt("lang-combobox")
