@@ -67,12 +67,13 @@ Lors de cette mission, j’ai pu monter en compétence sur la migration de libra
             "THALES_BREST_SEA_TITLE": "Sea Guardian",
             "THALES_BREST_SEA_CLIENT": "Client : Thales à Brest.",
             "THALES_BREST_SEA_DATES": "De février 2023 à août 2023.",
-            "THALES_BREST_SEA_MISSION": "Le projet Sea Guardian est rattaché a l’entité UWS (Under Water Systems) de Thales DMS(Defence Mission Systems).
+            "THALES_BREST_SEA_MISSION": "Le projet Sea Guardian est rattaché a l’entité UWS (Under Water Systems) de Thales DMS (Defence Mission Systems).
 Ce projet a pour objectif de remplacer l’ATL2 par un drone, le but est que le drone ne soit qu’un relai entre les appareils et le centre de commandement.
 Je me suis occupé de la partie communication entre la partie vol (drone) et la partie sol (centre de traitement).
 J'ai du implémenter un service de communication pour pouvoir faire passer des message en UDP(sans vérification de bonne reception du message) ou en TCP(avec vérification de bonne reception du message).
 Sur cette mission, j’ai pu approfondir mes compétences en C++ et en agilité.",
             "THALES_BREST_SEA_ENV": ["C++", "Git", "Jira", "Agilité"],
+
 
             "SII": "Janvier à septembre 2022 : SII",
 
@@ -80,9 +81,11 @@ Sur cette mission, j’ai pu approfondir mes compétences en C++ et en agilité.
             "THALES_BREST_MENACE_TITLE": "Menace",
             "THALES_BREST_MENACE_CLIENT": "Client : Thales à Brest.",
             "THALES_BREST_MENACE_DATES": "De décembre 2021 à septembre 2022",
-            "THALES_BREST_MENACE_MISSION": "Menace est une application de référencement des menace détectés lors d'un vol par les instruments à bord. Mon implication sur ce projet a été de faire de la maintenance et des corrections de faits techniques(bugs).
+            "THALES_BREST_MENACE_MISSION": "Menace est une application de référencement des menace détectés lors d'un vol par les instruments à bord.
+Mon implication sur ce projet a été de faire de la maintenance et des corrections de faits techniques(bugs).
 J’ai aussi dû faire des tests unitaires, des tests fonctionnels ainsi que des tests de non-régression.",
-            "THALES_BREST_MENACE_ENV": ["Java 8", "JavaFx", "Java Swing", "Git", "Agilité"],
+            "THALES_BREST_MENACE_ENV": ["Java 8", "JavaFX", "Java Swing", "Git", "Agilité"],
+
 
             "THALES_ALTERNANCE": "Octobre 2018 à septembre 2021 : Alternance chez Thales",
 
@@ -94,7 +97,7 @@ L’idée retenue a été un logiciel en Java principalement constitué d’une 
 Pour assurer une compatibilité avec les différents types de fichiers et librairies existantes, le logiciel supporte des plugins développés en Java ou en C/C++.
 Au cours du développement a été rajouté la possibilité de créer des graphiques pour comparer l’évolution de données dans le temps.
 Lors de ce projet j’ai beaucoup monté en compétence sur JavaFX et sur la conception d’IHM.",
-            "THALES_BREST_SAMDIS_ENV": ["Java 8", "JavaFx", "C", "JNI", "SqLite"],
+            "THALES_BREST_SAMDIS_ENV": ["Java 8", "JavaFX", "C", "JNI", "SqLite"],
 
             "THALES_BREST_CPP_TO_JAVA_ID": "thales_brest_cpp_to_java",
             "THALES_BREST_CPP_TO_JAVA_TITLE": "Étude des performances de Java",
@@ -105,6 +108,7 @@ Les comparaisons ont été faites sur le temps d’exécution des méthodes impo
 J’ai aussi eu à comparer les différents ramasse miettes, leurs efficacités et leurs vitesses d’exécutions.",
             "THALES_BREST_CPP_TO_JAVA_ENV": ["Java 8", "C", "C++", "JNI"],
 
+
             "KERPAPE": "Stage de BTS: centre mutualiste de Kerpape",
 
             "KERPAPE_LORIENT_I2_ID": "kerpape_lorient_i2",
@@ -113,8 +117,8 @@ J’ai aussi eu à comparer les différents ramasse miettes, leurs efficacités 
             "KERPAPE_LORIENT_I2_MISSION": "La fondation Kerpape vise à réunir des fond pour soutenir l'hopital et la recherche.
 La fondation souhaitait avoir un site WEB interne pour faciliter la recherche et la relance des donateurs.
 Le site offre les fonctionnnalitées suivantes:
-*L'affichage de tous les donateurs ainsi que le montant total de leurs donnations et d'autre informations personnelles.
-*Un page avec le détail de chaque donation, leurs dates et leurs montants.",
+> L'affichage de tous les donateurs ainsi que le montant total de leurs donnations et d'autre informations personnelles.
+> Un page avec le détail de chaque donation, leurs dates et leurs montants.",
             "KERPAPE_LORIENT_I2_ENV": ["HTML", "CSS", "PHP", "JQuery (JavaScript)", "Oracle DB", "MySql"],
 
             "KERPAPE_LORIENT_SUMMER_ID": "kerpape_lorient_summer",
@@ -128,7 +132,7 @@ Ce travail d'été est la suite et fin du 1er stage.",
             "KERPAPE_LORIENT_I1_TITLE": "Intranet",
             "KERPAPE_LORIENT_I1_DATES": "Du 15/05/2017 au 23/06/2017",
             "KERPAPE_LORIENT_I1_MISSION": "L'hopital utilise deux logiciels pour la gestion des clients.
-Un premier logiciel pour la saisie des entrèes/sorties des patients et un deuxième logiciel pour la gestion des plannings des patients.
+Un premier logiciel pour la saisie des entrèes/sorties des patients et un second logiciel pour la gestion des plannings des patients.
 Les informations des patients saisies par le personnel, sur le premier, peuvent être éronées ce qui entraine un rejet par le deuxième logiciel.
 La correction de ces erreurs ce faisait, historiquement, en modifier les fichiers de rejet et en les renvoyant à la main.
 
@@ -137,8 +141,7 @@ L'interface WEB fonctionne de la façon suivante:
  - Dans un premier temps la liste des rejets et affiché.
  - Ensuite, l'utilisateur choisi une erreur à corriger.
  - Le programme, lors de l'ouverture de l'erreur, va chercher à précompléter un maximum des informations manquantes ou pointer les informations contradictoires.
- - Pour finir, l'utilisateur applique les changements qui conviennent et envoi la
-correction.",
+ - Pour finir, l'utilisateur applique les changements qui conviennent et envoi la correction.",
             "KERPAPE_LORIENT_I1_ENV": ["HTML", "CSS", "PHP", "JQuery (JavaScript)", "Oracle DB", "MySql"]
         },
         "skills": {
@@ -267,29 +270,20 @@ Last, the tests sequences were to be integrated into the testbed to verify the p
             "THALES_BREST_TBSL_TITLE": "TBSL HMI",
             "THALES_BREST_TBSL_CLIENT": "Client : Thales in Brest.",
             "THALES_BREST_TBSL_DATES": "During 2 weeks.",
-            "THALES_BREST_TBSL_MISSION": "Portage d’une librairie propriétaire Thales de Linux vers Windows.
-Le projet est le portage, de Linux vers Windows, d’un logiciel de test de banc de carte embarquée dans une gamme de sonar bouée (Thales TUS).
-Le logiciel, écrit en Java, utilise une librairie native pour communiquer avec le matériel. J’ai dû faire le portage de cette librairie de Linux vers Windows.
-Lors de cette mission, j’ai pu monter en compétence sur la migration de librairie de Linux vers Windows ainsi que sur la compilation de DLL.",
-
-            "THALES_BREST_TBSL_MISSION": "Migration of a Thales propietary library from Linux to Windows.
-",
-
+            "THALES_BREST_TBSL_MISSION": "Migration of a Thales proprietary library from Linux to Windows.
+The migration of a testbed software for embedded card of sonobuoy.
+The software written in Java uses a C library to communicate with the hardware, I had to port this C library from Linux to Windows.",
             "THALES_BREST_TBSL_ENV": ["C", "Linux", "Windows", "Visual Studio C++"],
 
             "THALES_BREST_SEA_ID": "thales_brest_sea_guardian",
             "THALES_BREST_SEA_TITLE": "Sea Guardian",
             "THALES_BREST_SEA_CLIENT": "Client : Thales in Brest.",
             "THALES_BREST_SEA_DATES": "From february 2023 to august 2023.",
-            "THALES_BREST_SEA_MISSION": "Le projet Sea Guardian est rattaché au service AEROPORTE de l’entité UWS (Under Water Systems) de Thales DMS(Defence Mission Systems).
-Ce projet a pour objectif de remplacer l’ATL2 par un drone, le but est que le drone ne soit qu’un relai entre les appareils et le centre de commandement.
-Je me suis occupé de la partie communication entre la partie vol (drone) et la partie sol (centre de traitement).
-J'ai du implémenter un service de communication pour pouvoir faire passer des message en UDP(sans vérification de bonne reception du message) ou en TCP(avec vérification de bonne reception du message).
-Sur cette mission, j’ai pu approfondir mes compétences en C++ et en agilité.",
-
-            "THALES_BREST_SEA_MISSION": "",
-
+            "THALES_BREST_SEA_MISSION": "The Sea Guardian project belonging to the entity UWS (Under Water Systems) of Thales DMS (Defence Mission Systems).
+This project aim to replace the ATL2 with a drone that will serve as a relay between the battlefield and the command center.
+I had to work and the communication service by implementing a UDP/TCP communication service.",
             "THALES_BREST_SEA_ENV": ["C++", "Git", "Jira", "Agilité"],
+
 
             "SII": "January to september 2022 : SII",
 
@@ -297,80 +291,65 @@ Sur cette mission, j’ai pu approfondir mes compétences en C++ et en agilité.
             "THALES_BREST_MENACE_TITLE": "Menace",
             "THALES_BREST_MENACE_CLIENT": "Client : Thales in Brest.",
             "THALES_BREST_MENACE_DATES": "From december 2021 to september 2022",
-            "THALES_BREST_MENACE_MISSION": "Menace est une application de référencement des menace détectés lors d'un vol par les instruments à bord. Mon implication sur ce projet a été de faire de la maintenance et des corrections de faits techniques(bugs).
-J’ai aussi dû faire des tests unitaires, des tests fonctionnels ainsi que des tests de non-régression.",
+            "THALES_BREST_MENACE_MISSION": "Menace is a software-database that contains all the threats detected during missions.
+I had to do maintenance and bug correction.
+I also had to do unit test, functional test and non-regression test.",
+            "THALES_BREST_MENACE_ENV": ["Java 8", "JavaFX", "Java Swing", "Git", "Agilité"],
 
-            "THALES_BREST_MENACE_MISSION": "",
-
-            "THALES_BREST_MENACE_ENV": ["Java 8", "JavaFx", "Java Swing", "Git", "Agilité"],
 
             "THALES_ALTERNANCE": "October 2018 to september 2021 : Work-Study at Thales",
 
             "THALES_BREST_SAMDIS_ID": "thales_brest_samdis",
             "THALES_BREST_SAMDIS_TITLE": "SAMDIS data analysis",
             "THALES_BREST_SAMDIS_DATES": "From september 2019 to september 2021",
-            "THALES_BREST_SAMDIS_MISSION": "L’objectif de ce projet est de fournir une aide à l’analyse et au traitement de fichiers, documents, bases de données pour le développement du produit SAMDIS, développé dans le service Guerre Des Mines d’UWS.
-L’idée retenue a été un logiciel en Java principalement constitué d’une interface graphique, en JavaFX, extensible par des plugins, ces plugins sont conçus, implémentés et partagé par les utilisateurs.
-Pour assurer une compatibilité avec les différents types de fichiers et librairies existantes, le logiciel supporte des plugins développés en Java ou en C/C++.
-Au cours du développement a été rajouté la possibilité de créer des graphiques pour comparer l’évolution de données dans le temps.
-Lors de ce projet j’ai beaucoup monté en compétence sur JavaFX et sur la conception d’IHM.",
-
-            "THALES_BREST_SAMDIS_MISSION": "",
-
-            "THALES_BREST_SAMDIS_ENV": ["Java 8", "JavaFx", "C", "JNI", "SqLite"],
+            "THALES_BREST_SAMDIS_MISSION": "SAMDIS is an software embedded in a unmanned underwater vehicle pull by a boat. The engineers working on it sometimes create single use scripts, like shell or C programs, to verify the conformity of a file, the entries in a databse, etc... . Once used those scripts usually are thrown away and end up being rewrote.
+The purpose of this project was to propose a tool that can gather those scripts so they don't end being lost and rewrite and can be shared between the teams.
+The main idea was a Java software with a GUI in JavaFX that can be extended with plugins, plugins that were formely the scripts.
+To ensure compatibility with older tools and file format, those plugins can be either written in Java, C or C++ using the Java Native Interface.
+During development, the possibility to create graphs from data of a database.",
+            "THALES_BREST_SAMDIS_ENV": ["Java 8", "JavaFX", "C", "JNI", "SqLite"],
 
             "THALES_BREST_CPP_TO_JAVA_ID": "thales_brest_cpp_to_java",
             "THALES_BREST_CPP_TO_JAVA_TITLE": "Étude des performances de Java",
             "THALES_BREST_CPP_TO_JAVA_DATES": "From september 2018 to september 2019",
-            "THALES_BREST_CPP_TO_JAVA_MISSION": "Le but de ce projet était de tester les performances de Java, dans un premier temps, puis de les comparer avec celle du C++.
-On m’a demandé de traduire, du C++ vers le Java, un programme pour ensuite faire différents tests de charge sur les deux versions et de les comparer.
-Les comparaisons ont été faites sur le temps d’exécution des méthodes importantes ainsi que sur la mémoire utilisée par la JVM.
-J’ai aussi eu à comparer les différents ramasse miettes, leurs efficacités et leurs vitesses d’exécutions.",
-
-            "THALES_BREST_CPP_TO_JAVA_MISSION": "",
-
+            "THALES_BREST_CPP_TO_JAVA_MISSION": "The object of the 1 year project was to compare the performances of Java and C++.
+So for that, I first translated a C++ program to Java to then check how Java fare against C++ in term of execution time and memory consumption.
+I also checked to different garbage collector ship in with Java.",
             "THALES_BREST_CPP_TO_JAVA_ENV": ["Java 8", "C", "C++", "JNI"],
+
 
             "KERPAPE": "Advanced Vocational Certificate Intership: Kerpape mutualist center",
 
             "KERPAPE_LORIENT_I2_ID": "kerpape_lorient_i2",
             "KERPAPE_LORIENT_I2_TITLE": "Donor directory",
             "KERPAPE_LORIENT_I2_DATES": "From 08/01/2018 to 23/02/2018",
-            "KERPAPE_LORIENT_I2_MISSION": "La fondation Kerpape vise à réunir des fond pour soutenir l'hopital et la recherche.
-La fondation souhaitait avoir un site WEB interne pour faciliter la recherche et la relance des donateurs.
-Le site offre les fonctionnnalitées suivantes:
-*L'affichage de tous les donateurs ainsi que le montant total de leurs donnations et d'autre informations personnelles.
-*Un page avec le détail de chaque donation, leurs dates et leurs montants.",
-
-            "KERPAPE_LORIENT_I2_MISSION": "",
-
+            "KERPAPE_LORIENT_I2_MISSION": "The endowment fund of Kerpape tend to collect donations to help the hospital and research.
+They ordered a website to reference the donators so they can contacted for charity.
+The web site offers the functionality:
+> A page to show all the donators, the sum of their donations and othe personal info.
+> A page to display, for a donator, all their individual donation, how mush and when.",
             "KERPAPE_LORIENT_I2_ENV": ["HTML", "CSS", "PHP", "JQuery (JavaScript)", "Oracle DB", "MySql"],
 
             "KERPAPE_LORIENT_SUMMER_ID": "kerpape_lorient_summer",
             "KERPAPE_LORIENT_SUMMER_TITLE": "Intranet",
-            "KERPAPE_LORIENT_SUMMER_DATES": "Du 28/06/2017 au 26/07/2017",
+            "KERPAPE_LORIENT_SUMMER_DATES": "From 28/06/2017 to 26/07/2017",
             "KERPAPE_LORIENT_SUMMER_MISSION": "Same context as the first intership.
 This summer job is the continuation and end of the first internship.",
             "KERPAPE_LORIENT_SUMMER_ENV": ["HTML", "CSS", "PHP", "JQuery (JavaScript)", "Oracle DB", "MySql"],
 
             "KERPAPE_LORIENT_I1_ID": "kerpape_lorient_i1",
             "KERPAPE_LORIENT_I1_TITLE": "Intranet",
-            "KERPAPE_LORIENT_I1_DATES": "Du 15/05/2017 au 23/06/2017",
-            "KERPAPE_LORIENT_I1_MISSION": "L'hopital utilise deux logiciels pour la gestion des clients.
-Un premier logiciel pour la saisie des entrèes/sorties des patients et un deuxième logiciel pour la gestion des plannings des patients.
-Les informations des patients saisies par le personnel, sur le premier, peuvent être éronées ce qui entraine un rejet par le deuxième logiciel.
-La correction de ces erreurs ce faisait, historiquement, en modifier les fichiers de rejet et en les renvoyant à la main.
+            "KERPAPE_LORIENT_I1_DATES": "From 15/05/2017 to 23/06/2017",
+            "KERPAPE_LORIENT_I1_MISSION": "The hospital uses two software for it's patients management.
+The first is used to manage entrances/exits of the patients and the second for their schedules.
+When the staff enter wrong informations in the first sofware I get rejected by the second in the form a text file.
+Historically those text files where manualy edited and sent back.
 
-L'objectif de ce stage à été de créer une interface WEB pour faciliter et assister dans la correction des erreurs.
-L'interface WEB fonctionne de la façon suivante:
- - Dans un premier temps la liste des rejets et affiché.
- - Ensuite, l'utilisateur choisi une erreur à corriger.
- - Le programme, lors de l'ouverture de l'erreur, va chercher à précompléter un maximum des informations manquantes ou pointer les informations contradictoires.
- - Pour finir, l'utilisateur applique les changements qui conviennent et envoi la
-correction.",
-
-            "KERPAPE_LORIENT_I1_MISSION": "",
-
+The purpose of this intership was to create a intranet website to assist in the editing of the text files.
+The website offers the following:
+ - Listing of all the rejected input.
+ - When an error is selected, the website will try to resolve a maximum of the problem encontered in the error.
+ - Then the user can finish the correction of the error and send it back.",
             "KERPAPE_LORIENT_I1_ENV": ["HTML", "CSS", "PHP", "JQuery (JavaScript)", "Oracle DB", "MySql"]
         },
         "skills": {
