@@ -197,7 +197,7 @@ L'interface WEB fonctionne de la façon suivante:
             "BTS": {
                 "TITLE": " • 2016-2018 : BTS SIO",
                 "CONTENT": "Service Informatique aux Organisations Option SLAM (Solution Logiciel et Application Métier)
-BTS, avec deux stages de 1 mois",
+BTS, avec deux stages de un mois",
             }
         },
         "books": {
@@ -411,8 +411,7 @@ The website offers the following:
             },
             "BTS": {
                 "TITLE": " • 2016-2018 : Two-year technical degree in IT with a specialization in software development",
-                "CONTENT": "BTS SIO (Service Informatique aux Organisations) option SLAM (Solutions Logicielles et applications métiers)
-Option SLAM (Solution Logiciel et Application Métier) with 2 months intership.",
+                "CONTENT": "BTS SIO (Service Informatique aux Organisations) option SLAM (Solutions Logicielles et applications métiers) with two interships of one month.",
             }
         },
         "books": {
