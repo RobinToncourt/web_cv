@@ -5,7 +5,6 @@ use crate::content::{
     movies::Movies, projects::Projects, skills::Skills, sport::Sport,
 };
 use crate::Page;
-use crate::t;
 
 pub struct Menu {
     open: BTreeSet<String>,
@@ -54,8 +53,8 @@ impl Menu {
             .show(ctx, |ui| {
                 self.toggle_about(ui);
                 ui.add_space(12.0);
-                ui.heading(t!["menu", "exp"]);
-                ui.separator();
+                // ui.heading(t!["menu", "exp"]);
+                // ui.separator();
                 self.toggle_experience(ui);
                 // ui.add_space(12.0);
                 // ui.heading("Passe temps");

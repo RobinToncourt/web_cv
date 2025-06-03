@@ -38,6 +38,7 @@ impl TemplateApp {
         //     return eframe::get_value(storage, eframe::APP_KEY).unwrap_or_default();
         // }
 
+        let _ = &cc.egui_ctx.set_theme(egui::Theme::Dark);
         configure_text_styles(&cc.egui_ctx);
 
         Self::default()

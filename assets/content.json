@@ -10,7 +10,7 @@
         "about": {
             "TITLE": "Robin Toncourt",
             "CONTENT": "Déterminé, sérieux, autonome et conscient du
-travail qui m'attend, je suis persuadé que je serais
+travail qui m'attend, je suis convaincu que je serai
 un élément moteur au sein de votre structure !"
         },
         "exp":
@@ -147,12 +147,17 @@ L'interface WEB fonctionne de la façon suivante:
         "skills": {
             "skills": "Compétences",
 
+            "lang_dev": "Langages",
+            "tools": "Outils",
+            "env_heading": "Environnement",
+            "lang_speak": "Langues",
+
             "PROG_LANG": [
                 "Rust ★★★★★
-- Rust est mon langage de programmation préféré.",
+- Rust est mon langage de programmation préférentielle.",
                 "C/C++ ★★★★★",
                 "Java ★★★★☆
-- Le langage avec lequel j'ai vraiment commencé la programmation au lycée.",
+- Langage avec lequel j'ai vraiment commencé la programmation dés la terminale.",
                 "Python ★★★☆☆",
                 "Ada ★★☆☆☆",
                 "Sql★★★☆☆",
@@ -355,6 +360,11 @@ The website offers the following:
         "skills": {
             "skills": "Skills",
 
+            "lang_dev": "Languages",
+            "tools": "Tools",
+            "env_heading": "Environnement",
+            "lang_speak": "Languages",
+
             "PROG_LANG": [
                 "Rust ★★★★★
 - Rust is my favorite language.",
@@ -388,6 +398,8 @@ The website offers the following:
         },
         "edu": {
             "edu": "Training",
+
+
 
             "ADA": {
                 "TITLE": " • 2025 : Ada training by Robert Cholay",

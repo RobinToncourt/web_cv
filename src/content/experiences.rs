@@ -1,4 +1,7 @@
 use egui::{CollapsingHeader, TextStyle, FontId};
+use egui::text::LayoutJob;
+use egui::TextFormat;
+use egui::Color32;
 
 use crate::search_array;
 use crate::t;
@@ -61,14 +64,11 @@ impl crate::View for Experiences {
     }
 }
 
-use egui::text::LayoutJob;
-use egui::TextFormat;
-use egui::Color32;
 fn add_infos(of: &str, ui: &mut egui::Ui, font_id: &FontId, has_client: bool) {
     let (title_color, client_date_color, mission_color, env_color) = if ui.visuals().dark_mode {
-        (Color32::LIGHT_BLUE, Color32::LIGHT_GRAY, Color32::WHITE, Color32::DARK_GREEN)
+        (Color32::LIGHT_BLUE, Color32::LIGHT_GRAY, Color32::WHITE, Color32::LIGHT_GREEN)
     } else {
-        (Color32::BLUE, Color32::DARK_GRAY, Color32::BLACK, Color32::LIGHT_GREEN)
+        (Color32::BLUE, Color32::DARK_GRAY, Color32::BLACK, Color32::GREEN)
     };
 
     let id: &str = &format!("{of}_ID");
